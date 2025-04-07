@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  X,
-  Bell,
-  AlertTriangle,
-  CheckCircle,
-  Info,
-  XCircle,
-} from "lucide-react";
+import { X, AlertTriangle, CheckCircle, Info, XCircle } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -15,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
