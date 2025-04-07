@@ -9,7 +9,6 @@ import {
   IconNotification,
   IconPointer,
   IconReport,
-  IconSearch,
 } from "@tabler/icons-react";
 
 import { NavDocuments } from "@/components/nav-documents";
@@ -51,13 +50,7 @@ const data = {
       icon: IconForms,
     },
   ],
-  navSecondary: [
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
-  ],
+  navSecondary: [],
   documents: [
     {
       name: "Micro Interactions",
