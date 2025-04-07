@@ -66,34 +66,105 @@ const COLORS = [
   "#FF8042",
 ];
 
-const generateData = (): DataPoint[] => {
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const categories = ["Product A", "Product B", "Product C", "Product D"];
-
-  return months.map((month, index) => {
-    const entry: DataPoint = {
-      name: month,
-      month: index + 1,
-    };
-    categories.forEach((product) => {
-      entry[product] = Math.floor(Math.random() * 1000) + 200;
-    });
-    return entry;
-  });
-};
+// Static JSON data instead of generating it randomly
+const STATIC_DATA: DataPoint[] = [
+  {
+    name: "Jan",
+    month: 1,
+    "Product A": 834,
+    "Product B": 456,
+    "Product C": 631,
+    "Product D": 521,
+  },
+  {
+    name: "Feb",
+    month: 2,
+    "Product A": 756,
+    "Product B": 598,
+    "Product C": 718,
+    "Product D": 423,
+  },
+  {
+    name: "Mar",
+    month: 3,
+    "Product A": 892,
+    "Product B": 675,
+    "Product C": 543,
+    "Product D": 689,
+  },
+  {
+    name: "Apr",
+    month: 4,
+    "Product A": 678,
+    "Product B": 732,
+    "Product C": 801,
+    "Product D": 564,
+  },
+  {
+    name: "May",
+    month: 5,
+    "Product A": 945,
+    "Product B": 543,
+    "Product C": 678,
+    "Product D": 712,
+  },
+  {
+    name: "Jun",
+    month: 6,
+    "Product A": 832,
+    "Product B": 698,
+    "Product C": 542,
+    "Product D": 819,
+  },
+  {
+    name: "Jul",
+    month: 7,
+    "Product A": 723,
+    "Product B": 856,
+    "Product C": 914,
+    "Product D": 623,
+  },
+  {
+    name: "Aug",
+    month: 8,
+    "Product A": 876,
+    "Product B": 645,
+    "Product C": 782,
+    "Product D": 567,
+  },
+  {
+    name: "Sep",
+    month: 9,
+    "Product A": 934,
+    "Product B": 723,
+    "Product C": 651,
+    "Product D": 789,
+  },
+  {
+    name: "Oct",
+    month: 10,
+    "Product A": 789,
+    "Product B": 865,
+    "Product C": 512,
+    "Product D": 634,
+  },
+  {
+    name: "Nov",
+    month: 11,
+    "Product A": 876,
+    "Product B": 543,
+    "Product C": 687,
+    "Product D": 842,
+  },
+  {
+    name: "Dec",
+    month: 12,
+    "Product A": 967,
+    "Product B": 786,
+    "Product C": 845,
+    "Product D": 731,
+  },
+];
 
 const getPieData = (
   data: DataPoint[],
@@ -115,7 +186,6 @@ const getPieData = (
 };
 
 const DataVisualizationPage: React.FC = () => {
-  const [data] = useState<DataPoint[]>(generateData());
   const [chartType, setChartType] = useState<string>("line");
   const [dateRange, setDateRange] = useState<[number, number]>([1, 12]);
   const [activeProductTab, setActiveProductTab] = useState<string>("all");
@@ -128,7 +198,7 @@ const DataVisualizationPage: React.FC = () => {
     }
   }, [showTransitionAlert]);
 
-  const filteredData = data.filter(
+  const filteredData = STATIC_DATA.filter(
     (item) => item.month >= dateRange[0] && item.month <= dateRange[1],
   );
 
@@ -254,132 +324,145 @@ const DataVisualizationPage: React.FC = () => {
 
             {/* Chart */}
             <div className="w-full h-96 mt-4 transition-all duration-500 ease-in-out">
-              <ResponsiveContainer width="100%" height="100%">
-                <>
-                  {chartType === "line" && (
-                    <LineChart data={filteredData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      {activeProducts.map((product, index) => (
-                        <Line
-                          key={product}
-                          type="monotone"
-                          dataKey={product}
-                          stroke={COLORS[index % COLORS.length]}
-                          strokeWidth={2}
-                          activeDot={{ r: 8 }}
-                          isAnimationActive
-                          animationDuration={800}
-                        />
-                      ))}
-                    </LineChart>
-                  )}
-
-                  {chartType === "bar" && (
-                    <BarChart data={filteredData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      {activeProducts.map((product, index) => (
-                        <Bar
-                          key={product}
-                          dataKey={product}
-                          fill={COLORS[index % COLORS.length]}
-                          isAnimationActive
-                          animationDuration={800}
-                        />
-                      ))}
-                    </BarChart>
-                  )}
-
-                  {chartType === "area" && (
-                    <AreaChart data={filteredData}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      {activeProducts.map((product, index) => (
-                        <Area
-                          key={product}
-                          type="monotone"
-                          dataKey={product}
-                          stackId="1"
-                          stroke={COLORS[index % COLORS.length]}
-                          fill={COLORS[index % COLORS.length]}
-                          fillOpacity={0.6}
-                          isAnimationActive
-                          animationDuration={800}
-                        />
-                      ))}
-                    </AreaChart>
-                  )}
-
-                  {chartType === "pie" && (
-                    <PieChart>
-                      <Tooltip />
-                      <Legend />
-                      <Pie
-                        data={getPieData(data, dateRange)}
-                        cx="50%"
-                        cy="50%"
-                        labelLine
-                        label={({ name, percent }) =>
-                          `${name}: ${(percent * 100).toFixed(0)}%`
-                        }
-                        outerRadius={150}
-                        dataKey="value"
+              {/* Line Chart */}
+              {chartType === "line" && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={filteredData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    {activeProducts.map((product, index) => (
+                      <Line
+                        key={product}
+                        type="monotone"
+                        dataKey={product}
+                        stroke={COLORS[index % COLORS.length]}
+                        strokeWidth={2}
+                        activeDot={{ r: 8 }}
                         isAnimationActive
                         animationDuration={800}
-                      >
-                        {getPieData(data, dateRange).map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.color} />
-                        ))}
-                      </Pie>
-                    </PieChart>
-                  )}
+                      />
+                    ))}
+                  </LineChart>
+                </ResponsiveContainer>
+              )}
 
-                  {chartType === "radar" && (
-                    <RadarChart
+              {/* Bar Chart */}
+              {chartType === "bar" && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={filteredData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    {activeProducts.map((product, index) => (
+                      <Bar
+                        key={product}
+                        dataKey={product}
+                        fill={COLORS[index % COLORS.length]}
+                        isAnimationActive
+                        animationDuration={800}
+                      />
+                    ))}
+                  </BarChart>
+                </ResponsiveContainer>
+              )}
+
+              {/* Area Chart */}
+              {chartType === "area" && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={filteredData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    {activeProducts.map((product, index) => (
+                      <Area
+                        key={product}
+                        type="monotone"
+                        dataKey={product}
+                        stackId="1"
+                        stroke={COLORS[index % COLORS.length]}
+                        fill={COLORS[index % COLORS.length]}
+                        fillOpacity={0.6}
+                        isAnimationActive
+                        animationDuration={800}
+                      />
+                    ))}
+                  </AreaChart>
+                </ResponsiveContainer>
+              )}
+
+              {/* Pie Chart */}
+              {chartType === "pie" && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Tooltip />
+                    <Legend />
+                    <Pie
+                      data={getPieData(STATIC_DATA, dateRange)}
                       cx="50%"
                       cy="50%"
-                      outerRadius="80%"
-                      data={filteredData}
+                      labelLine
+                      label={({ name, percent }) =>
+                        `${name}: ${(percent * 100).toFixed(0)}%`
+                      }
+                      outerRadius={150}
+                      dataKey="value"
+                      isAnimationActive
+                      animationDuration={800}
                     >
-                      <PolarGrid />
-                      <PolarAngleAxis dataKey="name" />
-                      <PolarRadiusAxis />
-                      <Tooltip />
-                      <Legend />
-                      {activeProducts.map((product, index) => (
-                        <Radar
-                          key={product}
-                          name={product}
-                          dataKey={product}
-                          stroke={COLORS[index % COLORS.length]}
-                          fill={COLORS[index % COLORS.length]}
-                          fillOpacity={0.6}
-                          isAnimationActive
-                          animationDuration={800}
-                        />
-                      ))}
-                    </RadarChart>
-                  )}
-                </>
-              </ResponsiveContainer>
+                      {getPieData(STATIC_DATA, dateRange).map(
+                        (entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} />
+                        ),
+                      )}
+                    </Pie>
+                  </PieChart>
+                </ResponsiveContainer>
+              )}
+
+              {/* Radar Chart */}
+              {chartType === "radar" && (
+                <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart
+                    cx="50%"
+                    cy="50%"
+                    outerRadius="80%"
+                    data={filteredData}
+                  >
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="name" />
+                    <PolarRadiusAxis />
+                    <Tooltip />
+                    <Legend />
+                    {activeProducts.map((product, index) => (
+                      <Radar
+                        key={product}
+                        name={product}
+                        dataKey={product}
+                        stroke={COLORS[index % COLORS.length]}
+                        fill={COLORS[index % COLORS.length]}
+                        fillOpacity={0.6}
+                        isAnimationActive
+                        animationDuration={800}
+                      />
+                    ))}
+                  </RadarChart>
+                </ResponsiveContainer>
+              )}
             </div>
           </div>
         </CardContent>
 
         <CardFooter className="flex justify-between">
           <div className="text-sm text-gray-500">
-            Data range: {data[dateRange[0] - 1]?.name} -{" "}
-            {data[dateRange[1] - 1]?.name}
+            Data range: {STATIC_DATA[dateRange[0] - 1]?.name} -{" "}
+            {STATIC_DATA[dateRange[1] - 1]?.name}
           </div>
           <Button variant="outline" onClick={() => setDateRange([1, 12])}>
             Reset View
