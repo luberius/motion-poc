@@ -25,6 +25,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import JobStatus from "./job-status";
+import { Toaster } from "sonner";
 
 const data = {
   user: {
@@ -40,7 +42,7 @@ const data = {
     },
     {
       title: "Reports",
-      url: "#",
+      url: "/poc/reports",
       icon: IconReport,
     },
     {
@@ -109,6 +111,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
+        <Toaster position="top-right" richColors />
+        <JobStatus />
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>

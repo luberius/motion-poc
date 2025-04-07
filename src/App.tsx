@@ -9,6 +9,7 @@ import DataVisualizationPage from "./views/dataviz/dataviz";
 import LoadingShowcase from "./views/loading/loading";
 import ContextualNavigationShowcase from "./views/navigations/navigations";
 import InvoicePage from "./views/form/list";
+import ReportGeneratorPage from "./views/reports/reports";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path="poc/form" element={<InvoiceForm />} />
         <Route path="poc/list" element={<InvoicePage />} />
+        <Route path="poc/reports" element={<ReportGeneratorPage />} />
         <Route path="poc/notification" element={<NotificationSystems />} />
         <Route
           path="poc/microinteractions"
