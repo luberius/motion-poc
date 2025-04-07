@@ -1,0 +1,886 @@
+[
+  {
+    "invoiceId": "INV-2025-0001",
+    "date": "2025-03-15",
+    "dueDate": "2025-04-14",
+    "status": "paid",
+    "customer": "Acme Corporation",
+    "shippingAddress": "123 Main Street, San Francisco, CA 94105, USA",
+    "items": [
+      {
+        "id": "ITEM-101",
+        "description": "Web Development Services",
+        "quantity": 40,
+        "unitPrice": 125.00,
+        "amount": 5000.00
+      },
+      {
+        "id": "ITEM-102",
+        "description": "Cloud Hosting (Monthly)",
+        "quantity": 1,
+        "unitPrice": 299.99,
+        "amount": 299.99
+      }
+    ],
+    "subtotal": 5299.99,
+    "taxRate": 8.5,
+    "taxAmount": 450.50,
+    "total": 5750.49,
+    "notes": "Thank you for your business!"
+  },
+  {
+    "invoiceId": "INV-2025-0002",
+    "date": "2025-03-20",
+    "dueDate": "2025-04-19",
+    "status": "pending",
+    "customer": "Globex Industries",
+    "shippingAddress": "456 Technology Drive, Boston, MA 02110, USA",
+    "items": [
+      {
+        "id": "ITEM-201",
+        "description": "IT Consulting",
+        "quantity": 20,
+        "unitPrice": 175.00,
+        "amount": 3500.00
+      },
+      {
+        "id": "ITEM-202",
+        "description": "Hardware Installation",
+        "quantity": 5,
+        "unitPrice": 250.00,
+        "amount": 1250.00
+      },
+      {
+        "id": "ITEM-203",
+        "description": "Software Licenses",
+        "quantity": 10,
+        "unitPrice": 89.99,
+        "amount": 899.90
+      }
+    ],
+    "subtotal": 5649.90,
+    "taxRate": 6.25,
+    "taxAmount": 353.12,
+    "total": 6003.02,
+    "notes": "Net 30 payment terms apply"
+  },
+  {
+    "invoiceId": "INV-2025-0003",
+    "date": "2025-04-01",
+    "dueDate": "2025-05-01",
+    "status": "overdue",
+    "customer": "Stark Enterprises",
+    "shippingAddress": "789 Innovation Avenue, New York, NY 10012, USA",
+    "items": [
+      {
+        "id": "ITEM-301",
+        "description": "System Security Audit",
+        "quantity": 1,
+        "unitPrice": 7500.00,
+        "amount": 7500.00
+      },
+      {
+        "id": "ITEM-302",
+        "description": "Firewall Implementation",
+        "quantity": 1,
+        "unitPrice": 3250.00,
+        "amount": 3250.00
+      }
+    ],
+    "subtotal": 10750.00,
+    "taxRate": 8.875,
+    "taxAmount": 954.06,
+    "total": 11704.06,
+    "notes": "Please reference invoice number on payment"
+  },
+  {
+    "invoiceId": "INV-2025-0004",
+    "date": "2025-04-05",
+    "dueDate": "2025-05-05",
+    "status": "draft",
+    "customer": "Wayne Enterprises",
+    "shippingAddress": "1007 Mountain Drive, Gotham, NJ 07101, USA",
+    "items": [
+      {
+        "id": "ITEM-401",
+        "description": "Security Personnel (Monthly)",
+        "quantity": 720,
+        "unitPrice": 35.00,
+        "amount": 25200.00
+      },
+      {
+        "id": "ITEM-402",
+        "description": "Surveillance Equipment Maintenance",
+        "quantity": 1,
+        "unitPrice": 1200.00,
+        "amount": 1200.00
+      }
+    ],
+    "subtotal": 26400.00,
+    "taxRate": 6.625,
+    "taxAmount": 1749.00,
+    "total": 28149.00,
+    "notes": "Confidential billing"
+  },
+  {
+    "invoiceId": "INV-2025-0005",
+    "date": "2025-04-06",
+    "dueDate": "2025-04-21",
+    "status": "pending",
+    "customer": "Pied Piper",
+    "shippingAddress": "5230 Newell Road, Palo Alto, CA 94303, USA",
+    "items": [
+      {
+        "id": "ITEM-501",
+        "description": "Data Compression Algorithm License",
+        "quantity": 1,
+        "unitPrice": 15000.00,
+        "amount": 15000.00
+      },
+      {
+        "id": "ITEM-502",
+        "description": "API Integration Support",
+        "quantity": 15,
+        "unitPrice": 150.00,
+        "amount": 2250.00
+      }
+    ],
+    "subtotal": 17250.00,
+    "taxRate": 9.0,
+    "taxAmount": 1552.50,
+    "total": 18802.50,
+    "notes": "Early payment discount of 2% if paid within 10 days"
+  },
+  {
+    "invoiceId": "INV-2025-0001",
+    "date": "2025-03-15",
+    "dueDate": "2025-04-14",
+    "status": "paid",
+    "customer": "Acme Corporation",
+    "shippingAddress": "123 Main Street, San Francisco, CA 94105, USA",
+    "items": [
+      {
+        "id": "ITEM-101",
+        "description": "Web Development Services",
+        "quantity": 40,
+        "unitPrice": 125.00,
+        "amount": 5000.00
+      },
+      {
+        "id": "ITEM-102",
+        "description": "Cloud Hosting (Monthly)",
+        "quantity": 1,
+        "unitPrice": 299.99,
+        "amount": 299.99
+      }
+    ],
+    "subtotal": 5299.99,
+    "taxRate": 8.5,
+    "taxAmount": 450.50,
+    "total": 5750.49,
+    "notes": "Thank you for your business!"
+  },
+  {
+    "invoiceId": "INV-2025-0002",
+    "date": "2025-03-20",
+    "dueDate": "2025-04-19",
+    "status": "pending",
+    "customer": "Globex Industries",
+    "shippingAddress": "456 Technology Drive, Boston, MA 02110, USA",
+    "items": [
+      {
+        "id": "ITEM-201",
+        "description": "IT Consulting",
+        "quantity": 20,
+        "unitPrice": 175.00,
+        "amount": 3500.00
+      },
+      {
+        "id": "ITEM-202",
+        "description": "Hardware Installation",
+        "quantity": 5,
+        "unitPrice": 250.00,
+        "amount": 1250.00
+      },
+      {
+        "id": "ITEM-203",
+        "description": "Software Licenses",
+        "quantity": 10,
+        "unitPrice": 89.99,
+        "amount": 899.90
+      }
+    ],
+    "subtotal": 5649.90,
+    "taxRate": 6.25,
+    "taxAmount": 353.12,
+    "total": 6003.02,
+    "notes": "Net 30 payment terms apply"
+  },
+  {
+    "invoiceId": "INV-2025-0003",
+    "date": "2025-04-01",
+    "dueDate": "2025-05-01",
+    "status": "overdue",
+    "customer": "Stark Enterprises",
+    "shippingAddress": "789 Innovation Avenue, New York, NY 10012, USA",
+    "items": [
+      {
+        "id": "ITEM-301",
+        "description": "System Security Audit",
+        "quantity": 1,
+        "unitPrice": 7500.00,
+        "amount": 7500.00
+      },
+      {
+        "id": "ITEM-302",
+        "description": "Firewall Implementation",
+        "quantity": 1,
+        "unitPrice": 3250.00,
+        "amount": 3250.00
+      }
+    ],
+    "subtotal": 10750.00,
+    "taxRate": 8.875,
+    "taxAmount": 954.06,
+    "total": 11704.06,
+    "notes": "Please reference invoice number on payment"
+  },
+  {
+    "invoiceId": "INV-2025-0004",
+    "date": "2025-04-05",
+    "dueDate": "2025-05-05",
+    "status": "draft",
+    "customer": "Wayne Enterprises",
+    "shippingAddress": "1007 Mountain Drive, Gotham, NJ 07101, USA",
+    "items": [
+      {
+        "id": "ITEM-401",
+        "description": "Security Personnel (Monthly)",
+        "quantity": 720,
+        "unitPrice": 35.00,
+        "amount": 25200.00
+      },
+      {
+        "id": "ITEM-402",
+        "description": "Surveillance Equipment Maintenance",
+        "quantity": 1,
+        "unitPrice": 1200.00,
+        "amount": 1200.00
+      }
+    ],
+    "subtotal": 26400.00,
+    "taxRate": 6.625,
+    "taxAmount": 1749.00,
+    "total": 28149.00,
+    "notes": "Confidential billing"
+  },
+  {
+    "invoiceId": "INV-2025-0005",
+    "date": "2025-04-06",
+    "dueDate": "2025-04-21",
+    "status": "pending",
+    "customer": "Pied Piper",
+    "shippingAddress": "5230 Newell Road, Palo Alto, CA 94303, USA",
+    "items": [
+      {
+        "id": "ITEM-501",
+        "description": "Data Compression Algorithm License",
+        "quantity": 1,
+        "unitPrice": 15000.00,
+        "amount": 15000.00
+      },
+      {
+        "id": "ITEM-502",
+        "description": "API Integration Support",
+        "quantity": 15,
+        "unitPrice": 150.00,
+        "amount": 2250.00
+      }
+    ],
+    "subtotal": 17250.00,
+    "taxRate": 9.0,
+    "taxAmount": 1552.50,
+    "total": 18802.50,
+    "notes": "Early payment discount of 2% if paid within 10 days"
+  },
+  {
+    "invoiceId": "INV-2025-0006",
+    "date": "2025-04-10",
+    "dueDate": "2025-05-10",
+    "status": "paid",
+    "customer": "Cyberdyne Systems",
+    "shippingAddress": "18144 El Camino Real, Sunnyvale, CA 94087, USA",
+    "items": [
+      {
+        "id": "ITEM-601",
+        "description": "AI Research Consultation",
+        "quantity": 30,
+        "unitPrice": 250.00,
+        "amount": 7500.00
+      },
+      {
+        "id": "ITEM-602",
+        "description": "Neural Network Training",
+        "quantity": 1,
+        "unitPrice": 4999.99,
+        "amount": 4999.99
+      }
+    ],
+    "subtotal": 12499.99,
+    "taxRate": 9.25,
+    "taxAmount": 1156.25,
+    "total": 13656.24,
+    "notes": "Payment received via wire transfer"
+  },
+  {
+    "invoiceId": "INV-2025-0007",
+    "date": "2025-04-12",
+    "dueDate": "2025-05-12",
+    "status": "pending",
+    "customer": "Initech",
+    "shippingAddress": "4120 Freidrich Lane, Austin, TX 78744, USA",
+    "items": [
+      {
+        "id": "ITEM-701",
+        "description": "Office Software Suite (25 licenses)",
+        "quantity": 25,
+        "unitPrice": 199.99,
+        "amount": 4999.75
+      },
+      {
+        "id": "ITEM-702",
+        "description": "IT Support (Monthly)",
+        "quantity": 1,
+        "unitPrice": 1200.00,
+        "amount": 1200.00
+      }
+    ],
+    "subtotal": 6199.75,
+    "taxRate": 6.25,
+    "taxAmount": 387.48,
+    "total": 6587.23,
+    "notes": "Please remit payment by due date"
+  },
+  {
+    "invoiceId": "INV-2025-0008",
+    "date": "2025-04-15",
+    "dueDate": "2025-05-15",
+    "status": "draft",
+    "customer": "Los Pollos Hermanos",
+    "shippingAddress": "12000 Montgomery Blvd NE, Albuquerque, NM 87111, USA",
+    "items": [
+      {
+        "id": "ITEM-801",
+        "description": "POS System Installation",
+        "quantity": 4,
+        "unitPrice": 1200.00,
+        "amount": 4800.00
+      },
+      {
+        "id": "ITEM-802",
+        "description": "Employee Training",
+        "quantity": 16,
+        "unitPrice": 75.00,
+        "amount": 1200.00
+      }
+    ],
+    "subtotal": 6000.00,
+    "taxRate": 7.875,
+    "taxAmount": 472.50,
+    "total": 6472.50,
+    "notes": "Draft invoice - Subject to approval"
+  },
+  {
+    "invoiceId": "INV-2025-0009",
+    "date": "2025-04-18",
+    "dueDate": "2025-05-18",
+    "status": "paid",
+    "customer": "Dunder Mifflin",
+    "shippingAddress": "1725 Slough Avenue, Scranton, PA 18505, USA",
+    "items": [
+      {
+        "id": "ITEM-901",
+        "description": "Premium Paper Supply (Monthly)",
+        "quantity": 200,
+        "unitPrice": 45.50,
+        "amount": 9100.00
+      },
+      {
+        "id": "ITEM-902",
+        "description": "Printer Maintenance",
+        "quantity": 5,
+        "unitPrice": 120.00,
+        "amount": 600.00
+      }
+    ],
+    "subtotal": 9700.00,
+    "taxRate": 6.0,
+    "taxAmount": 582.00,
+    "total": 10282.00,
+    "notes": "Thank you for your prompt payment"
+  },
+  {
+    "invoiceId": "INV-2025-0010",
+    "date": "2025-04-20",
+    "dueDate": "2025-05-20",
+    "status": "overdue",
+    "customer": "Sterling Cooper",
+    "shippingAddress": "405 Madison Avenue, New York, NY 10017, USA",
+    "items": [
+      {
+        "id": "ITEM-1001",
+        "description": "Marketing Campaign Development",
+        "quantity": 1,
+        "unitPrice": 35000.00,
+        "amount": 35000.00
+      },
+      {
+        "id": "ITEM-1002",
+        "description": "Creative Direction Services",
+        "quantity": 25,
+        "unitPrice": 350.00,
+        "amount": 8750.00
+      }
+    ],
+    "subtotal": 43750.00,
+    "taxRate": 8.875,
+    "taxAmount": 3882.81,
+    "total": 47632.81,
+    "notes": "Payment is now overdue - please remit immediately"
+  },
+  {
+    "invoiceId": "INV-2025-0011",
+    "date": "2025-04-22",
+    "dueDate": "2025-05-22",
+    "status": "pending",
+    "customer": "Oscorp Industries",
+    "shippingAddress": "5960 Broadway, New York, NY 10463, USA",
+    "items": [
+      {
+        "id": "ITEM-1101",
+        "description": "Genetic Research Equipment",
+        "quantity": 2,
+        "unitPrice": 24999.99,
+        "amount": 49999.98
+      },
+      {
+        "id": "ITEM-1102",
+        "description": "Laboratory Supplies",
+        "quantity": 1,
+        "unitPrice": 8750.00,
+        "amount": 8750.00
+      }
+    ],
+    "subtotal": 58749.98,
+    "taxRate": 8.875,
+    "taxAmount": 5214.06,
+    "total": 63964.04,
+    "notes": "Hazardous materials handling fee included"
+  },
+  {
+    "invoiceId": "INV-2025-0012",
+    "date": "2025-04-25",
+    "dueDate": "2025-05-25",
+    "status": "pending",
+    "customer": "Umbrella Corporation",
+    "shippingAddress": "245 Raccoon Street, Raccoon City, IL 60601, USA",
+    "items": [
+      {
+        "id": "ITEM-1201",
+        "description": "Pharmaceutical Research Services",
+        "quantity": 160,
+        "unitPrice": 225.00,
+        "amount": 36000.00
+      },
+      {
+        "id": "ITEM-1202",
+        "description": "Laboratory Safety Equipment",
+        "quantity": 10,
+        "unitPrice": 899.99,
+        "amount": 8999.90
+      }
+    ],
+    "subtotal": 44999.90,
+    "taxRate": 6.25,
+    "taxAmount": 2812.49,
+    "total": 47812.39,
+    "notes": "Biohazard handling certification required on delivery"
+  },
+  {
+    "invoiceId": "INV-2025-0013",
+    "date": "2025-04-28",
+    "dueDate": "2025-05-28",
+    "status": "draft",
+    "customer": "Monsters Inc",
+    "shippingAddress": "123 Scarers Avenue, Monstropolis, CA 90210, USA",
+    "items": [
+      {
+        "id": "ITEM-1301",
+        "description": "Energy Conversion Technology",
+        "quantity": 1,
+        "unitPrice": 75000.00,
+        "amount": 75000.00
+      },
+      {
+        "id": "ITEM-1302",
+        "description": "Safety Training Program",
+        "quantity": 50,
+        "unitPrice": 120.00,
+        "amount": 6000.00
+      }
+    ],
+    "subtotal": 81000.00,
+    "taxRate": 9.5,
+    "taxAmount": 7695.00,
+    "total": 88695.00,
+    "notes": "Draft invoice pending management approval"
+  },
+  {
+    "invoiceId": "INV-2025-0014",
+    "date": "2025-05-01",
+    "dueDate": "2025-05-31",
+    "status": "paid",
+    "customer": "Tyrell Corporation",
+    "shippingAddress": "8354 Sunset Boulevard, Los Angeles, CA 90069, USA",
+    "items": [
+      {
+        "id": "ITEM-1401",
+        "description": "Synthetic Biology Consulting",
+        "quantity": 80,
+        "unitPrice": 375.00,
+        "amount": 30000.00
+      },
+      {
+        "id": "ITEM-1402",
+        "description": "Optical System Components",
+        "quantity": 12,
+        "unitPrice": 3299.99,
+        "amount": 39599.88
+      }
+    ],
+    "subtotal": 69599.88,
+    "taxRate": 9.5,
+    "taxAmount": 6611.99,
+    "total": 76211.87,
+    "notes": "Confidential project - special handling required"
+  },
+  {
+    "invoiceId": "INV-2025-0015",
+    "date": "2025-05-03",
+    "dueDate": "2025-06-02",
+    "status": "pending",
+    "customer": "Blue Sun Corporation",
+    "shippingAddress": "401 Alliance Avenue, New Melbourne, AZ 85001, USA",
+    "items": [
+      {
+        "id": "ITEM-1501",
+        "description": "Atmospheric Processors (Installation)",
+        "quantity": 1,
+        "unitPrice": 129500.00,
+        "amount": 129500.00
+      },
+      {
+        "id": "ITEM-1502",
+        "description": "Maintenance Contract (5 year)",
+        "quantity": 1,
+        "unitPrice": 45000.00,
+        "amount": 45000.00
+      }
+    ],
+    "subtotal": 174500.00,
+    "taxRate": 5.6,
+    "taxAmount": 9772.00,
+    "total": 184272.00,
+    "notes": "Installation to be scheduled within 30 days of payment"
+  },
+  {
+    "invoiceId": "INV-2025-0016",
+    "date": "2025-05-05",
+    "dueDate": "2025-06-04",
+    "status": "paid",
+    "customer": "Buy N Large",
+    "shippingAddress": "555 Corporation Way, Seattle, WA 98101, USA",
+    "items": [
+      {
+        "id": "ITEM-1601",
+        "description": "Retail Automation System",
+        "quantity": 15,
+        "unitPrice": 8999.99,
+        "amount": 134999.85
+      },
+      {
+        "id": "ITEM-1602",
+        "description": "Customer Data Analysis",
+        "quantity": 1,
+        "unitPrice": 12500.00,
+        "amount": 12500.00
+      }
+    ],
+    "subtotal": 147499.85,
+    "taxRate": 10.1,
+    "taxAmount": 14897.48,
+    "total": 162397.33,
+    "notes": "Thank you for your business - loyalty discount applied"
+  },
+  {
+    "invoiceId": "INV-2025-0017",
+    "date": "2025-05-08",
+    "dueDate": "2025-06-07",
+    "status": "overdue",
+    "customer": "Soylent Corporation",
+    "shippingAddress": "725 5th Avenue, New York, NY 10022, USA",
+    "items": [
+      {
+        "id": "ITEM-1701",
+        "description": "Food Processing Equipment",
+        "quantity": 3,
+        "unitPrice": 65000.00,
+        "amount": 195000.00
+      },
+      {
+        "id": "ITEM-1702",
+        "description": "Quality Assurance Protocols",
+        "quantity": 1,
+        "unitPrice": 18750.00,
+        "amount": 18750.00
+      }
+    ],
+    "subtotal": 213750.00,
+    "taxRate": 8.875,
+    "taxAmount": 18970.31,
+    "total": 232720.31,
+    "notes": "Third payment reminder - please contact accounts immediately"
+  },
+  {
+    "invoiceId": "INV-2025-0018",
+    "date": "2025-05-10",
+    "dueDate": "2025-06-09",
+    "status": "draft",
+    "customer": "Aperture Science",
+    "shippingAddress": "10625 N County Road 29, Fort Collins, CO 80524, USA",
+    "items": [
+      {
+        "id": "ITEM-1801",
+        "description": "Portal Technology Research",
+        "quantity": 1,
+        "unitPrice": 250000.00,
+        "amount": 250000.00
+      },
+      {
+        "id": "ITEM-1802",
+        "description": "Testing Chamber Construction",
+        "quantity": 5,
+        "unitPrice": 45000.00,
+        "amount": 225000.00
+      }
+    ],
+    "subtotal": 475000.00,
+    "taxRate": 7.65,
+    "taxAmount": 36337.50,
+    "total": 511337.50,
+    "notes": "Draft pending government approval"
+  },
+  {
+    "invoiceId": "INV-2025-0019",
+    "date": "2025-05-12",
+    "dueDate": "2025-06-11",
+    "status": "pending",
+    "customer": "InGen",
+    "shippingAddress": "1875 Explorer Street, Costa Rica",
+    "items": [
+      {
+        "id": "ITEM-1901",
+        "description": "Genetic Sequencing Equipment",
+        "quantity": 2,
+        "unitPrice": 175000.00,
+        "amount": 350000.00
+      },
+      {
+        "id": "ITEM-1902",
+        "description": "Laboratory Containment Systems",
+        "quantity": 8,
+        "unitPrice": 35000.00,
+        "amount": 280000.00
+      }
+    ],
+    "subtotal": 630000.00,
+    "taxRate": 13.0,
+    "taxAmount": 81900.00,
+    "total": 711900.00,
+    "notes": "International shipping - special arrangements required"
+  },
+  {
+    "invoiceId": "INV-2025-0020",
+    "date": "2025-05-15",
+    "dueDate": "2025-06-14",
+    "status": "paid",
+    "customer": "Massive Dynamic",
+    "shippingAddress": "655 Park Avenue, New York, NY 10065, USA",
+    "items": [
+      {
+        "id": "ITEM-2001",
+        "description": "Quantum Entanglement Research",
+        "quantity": 1,
+        "unitPrice": 750000.00,
+        "amount": 750000.00
+      },
+      {
+        "id": "ITEM-2002",
+        "description": "Advanced Materials Development",
+        "quantity": 1,
+        "unitPrice": 500000.00,
+        "amount": 500000.00
+      }
+    ],
+    "subtotal": 1250000.00,
+    "taxRate": 8.875,
+    "taxAmount": 110937.50,
+    "total": 1360937.50,
+    "notes": "Classified research project - NDA applies"
+  },
+  {
+    "invoiceId": "INV-2025-0021",
+    "date": "2025-05-18",
+    "dueDate": "2025-06-17",
+    "status": "draft",
+    "customer": "Weyland-Yutani Corp",
+    "shippingAddress": "1320 North Mission Road, Los Angeles, CA 90033, USA",
+    "items": [
+      {
+        "id": "ITEM-2101",
+        "description": "Deep Space Exploration Equipment",
+        "quantity": 1,
+        "unitPrice": 2500000.00,
+        "amount": 2500000.00
+      },
+      {
+        "id": "ITEM-2102",
+        "description": "Xenobiology Containment Units",
+        "quantity": 5,
+        "unitPrice": 150000.00,
+        "amount": 750000.00
+      }
+    ],
+    "subtotal": 3250000.00,
+    "taxRate": 9.5,
+    "taxAmount": 308750.00,
+    "total": 3558750.00,
+    "notes": "Building better worlds - corporate rate applied"
+  },
+  {
+    "invoiceId": "INV-2025-0022",
+    "date": "2025-05-20",
+    "dueDate": "2025-06-19",
+    "status": "pending",
+    "customer": "Wonka Industries",
+    "shippingAddress": "100 Chocolate Avenue, Hershey, PA 17033, USA",
+    "items": [
+      {
+        "id": "ITEM-2201",
+        "description": "Automated Candy Production Line",
+        "quantity": 2,
+        "unitPrice": 350000.00,
+        "amount": 700000.00
+      },
+      {
+        "id": "ITEM-2202",
+        "description": "R&D Laboratory Equipment",
+        "quantity": 1,
+        "unitPrice": 250000.00,
+        "amount": 250000.00
+      }
+    ],
+    "subtotal": 950000.00,
+    "taxRate": 6.0,
+    "taxAmount": 57000.00,
+    "total": 1007000.00,
+    "notes": "Pure imagination - custom installation included"
+  },
+  {
+    "invoiceId": "INV-2025-0023",
+    "date": "2025-05-22",
+    "dueDate": "2025-06-21",
+    "status": "overdue",
+    "customer": "Prestige Imports",
+    "shippingAddress": "7980 Biscayne Boulevard, Miami, FL 33138, USA",
+    "items": [
+      {
+        "id": "ITEM-2301",
+        "description": "Luxury Vehicle Fleet (Corporate)",
+        "quantity": 5,
+        "unitPrice": 125000.00,
+        "amount": 625000.00
+      },
+      {
+        "id": "ITEM-2302",
+        "description": "Custom Modifications",
+        "quantity": 5,
+        "unitPrice": 35000.00,
+        "amount": 175000.00
+      }
+    ],
+    "subtotal": 800000.00,
+    "taxRate": 7.0,
+    "taxAmount": 56000.00,
+    "total": 856000.00,
+    "notes": "Payment past due - financing options available"
+  },
+  {
+    "invoiceId": "INV-2025-0024",
+    "date": "2025-05-25",
+    "dueDate": "2025-06-24",
+    "status": "paid",
+    "customer": "Gekko & Co",
+    "shippingAddress": "23 Wall Street, New York, NY 10005, USA",
+    "items": [
+      {
+        "id": "ITEM-2401",
+        "description": "Financial Analysis Software (Enterprise)",
+        "quantity": 1,
+        "unitPrice": 450000.00,
+        "amount": 450000.00
+      },
+      {
+        "id": "ITEM-2402",
+        "description": "Trading Algorithm Development",
+        "quantity": 1,
+        "unitPrice": 375000.00,
+        "amount": 375000.00
+      }
+    ],
+    "subtotal": 825000.00,
+    "taxRate": 8.875,
+    "taxAmount": 73218.75,
+    "total": 898218.75,
+    "notes": "Greed is good - paid in full"
+  },
+  {
+    "invoiceId": "INV-2025-0025",
+    "date": "2025-05-28",
+    "dueDate": "2025-06-27",
+    "status": "pending",
+    "customer": "Nakatomi Trading Corp",
+    "shippingAddress": "2121 Avenue of the Stars, Century City, CA 90067, USA",
+    "items": [
+      {
+        "id": "ITEM-2501",
+        "description": "Building Security System Upgrade",
+        "quantity": 1,
+        "unitPrice": 275000.00,
+        "amount": 275000.00
+      },
+      {
+        "id": "ITEM-2502",
+        "description": "Vault Protection Technology",
+        "quantity": 1,
+        "unitPrice": 525000.00,
+        "amount": 525000.00
+      }
+    ],
+    "subtotal": 800000.00,
+    "taxRate": 9.5,
+    "taxAmount": 76000.00,
+    "total": 876000.00,
+    "notes": "Holiday installation surcharge may apply"
+  }
+]
